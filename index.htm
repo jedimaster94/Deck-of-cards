@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/global.css" />
+<title>
+</title>    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+        <div class="col-xs-8">
+            <h1>Deck Of Cards</h1>
+        </div>
+        <div class="col-xs-4 text-right">
+            <button class="new-deal btn btn-primary">
+                <span class="glyphicon glyphicon-ok glyph-pad-right"></span>Deal Again</button>    
+        </div>
+        <div class="clearfix"></div>
+        <div class="playing-surface">
+            
+        </div>
+    </div>
+</body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/game.js"></script>
+<script>
+    $(function(){
+
+        //  Call the function which sets the HTML value of a DOM element
+        NewDeal();
+        
+        $(".new-deal").click(function(){
+            //  start again
+           NewDeal();
+        });
+        
+        function NewDeal(){
+            //  Call the Game API to get the content, then apply it to a DOM element
+           $(".playing-surface").html(Game.DealCards(5)); 
+        }
+    });
+</script>
+</html>
