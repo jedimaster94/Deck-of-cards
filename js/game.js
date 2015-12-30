@@ -1,3 +1,4 @@
+
 var Game = (function ($) {
 
     //  Game API. This is where you put all your Javascript functionality that is generic

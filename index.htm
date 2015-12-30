@@ -26,18 +26,20 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/game.js"></script>
 <script>
+    //  self-executing anonymous function
     $(function(){
 
         //  Call the function which sets the HTML value of a DOM element
         NewDeal();
         
         $(".new-deal").click(function(){
-            //  start again
+            //  button click event
+            //  call the NewDeal() function
            NewDeal();
         });
         
         function NewDeal(){
-            //  Call the Game API to get the content, then apply it to a DOM element
+            //  Call the Game API (game.js) to get the content, then apply it to a DOM element
            $(".playing-surface").html(Game.DealCards(5)); 
         }
     });
